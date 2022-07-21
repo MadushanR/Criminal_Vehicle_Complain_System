@@ -13,3 +13,9 @@ input{
     border-color: black;
     border-width: 3px;
 }
+
+button{
+    font-size: x-large;
+    border-color: black;
+    border-width: 3px;
+}

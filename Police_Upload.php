@@ -1,3 +1,4 @@
+<?php?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
     <link rel="stylesheet" href="style.css">
+
     <script>
         // define the callAPI function that takes a first name and last name as parameters
         var callAPI = (License)=>{
@@ -24,7 +26,7 @@
                 redirect: 'follow'
             };
             // make API call with parameters and use promises to get response
-            fetch("https://5ndc49nxf7.execute-api.us-east-1.amazonaws.com/test", requestOptions)
+            fetch("https://tla90i45jj.execute-api.us-east-1.amazonaws.com/test", requestOptions)
             .then(response => response.text())
             .then(result => alert(JSON.parse(result).body))
             .catch(error => console.log('error', error));
@@ -35,9 +37,10 @@
 <body>
 
 <div>
-    <form>
+    <form method="post">
         Enter the vehicle number : <br><br>
-        <input type="text" name="license" id="license">&nbsp&nbsp&nbsp<input type="submit" value="submit" onclick="callAPI(document.getElementById('license').value)">
+        <input type="text" id="license">&nbsp&nbsp&nbsp
+        <button type="button" onclick="callAPI(document.getElementById('license').value)">Call API</button>
     </form>
 </div>
      
