@@ -8,13 +8,7 @@ form{
     text-align: center;
 }
 
-input{
-    font-size: x-large;
-    border-color: black;
-    border-width: 3px;
-}
-
-button{
+input,button,a{
     font-size: x-large;
     border-color: black;
     border-width: 3px;
