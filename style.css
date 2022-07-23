@@ -3,8 +3,8 @@ body{
     font-size: x-large;
 }
 
-form{
-    padding-top: 10%;
+div,form{
+    padding-top: 5%;
     text-align: center;
 }
 
