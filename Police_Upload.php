@@ -40,7 +40,7 @@
     <form method="post" action="Police_Upload.html">
         Enter the vehicle number : <br><br>
         <input type="text" id="license">&nbsp&nbsp&nbsp
-        <button type="button" onclick="callAPI(document.getElementById('license').value)">Call API</button>
+        <button type="button" onclick="callAPI(document.getElementById('license').value)">Submit</button>
     </form>
 </div>
      
