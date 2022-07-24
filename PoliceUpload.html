@@ -27,7 +27,6 @@
             // make API call with parameters and use promises to get response
             fetch("https://tla90i45jj.execute-api.us-east-1.amazonaws.com/test", requestOptions)
             .then(response => response.text())           
-            .then(window.location.replace("index.html"))
             .then(result => alert(JSON.parse(result).body))
             .try(error => console.log('error', error));
         }
