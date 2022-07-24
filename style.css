@@ -4,7 +4,7 @@ body{
 }
 
 div,form{
-    padding-top: 5%;
+    padding-top: 1%;
     text-align: center;
 }
 
@@ -13,3 +13,8 @@ input,button,a{
     border-color: black;
     border-width: 3px;
 }
+
+textarea {
+    width: 50%;
+    height: 200px;
+  }
