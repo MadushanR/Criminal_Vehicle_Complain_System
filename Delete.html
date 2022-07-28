@@ -19,7 +19,7 @@
             var raw = JSON.stringify({"License":License});
             // create a JSON object with parameters for API call and store in a variable
             var requestOptions = {
-                method: 'POST',
+                method: 'DELETE',
                 headers: myHeaders,
                 body: raw,
                 redirect: 'follow'
@@ -40,6 +40,8 @@
         Enter the vehicle number : &nbsp&nbsp <input type="text" id="license"><br><br>
         <button type="button" onclick="callAPI(document.getElementById('license').value)">Submit</button>
     </form>
+    <br>
+    <button onclick="window.location.href = 'index.html';">Home</button>
 </div>
      
 </body>
