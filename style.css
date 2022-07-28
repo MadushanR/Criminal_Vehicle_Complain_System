@@ -17,4 +17,8 @@ input,button,a{
 textarea {
     width: 50%;
     height: 200px;
-  }
+}
+
+#indexdiv{
+    padding-top: 15%;
+}
