@@ -3,8 +3,8 @@ body{
     font-size: x-large;
 }
 
-form{
-    padding-top: 10%;
+div,form{
+    padding-top: 1%;
     text-align: center;
 }
 
@@ -12,4 +12,13 @@ input,button,a{
     font-size: x-large;
     border-color: black;
     border-width: 3px;
+}
+
+textarea {
+    width: 50%;
+    height: 200px;
+}
+
+#indexdiv{
+    padding-top: 15%;
 }

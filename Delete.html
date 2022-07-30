@@ -19,13 +19,13 @@
             var raw = JSON.stringify({"License":License});
             // create a JSON object with parameters for API call and store in a variable
             var requestOptions = {
-                method: 'POST',
+                method: 'DELETE',
                 headers: myHeaders,
                 body: raw,
                 redirect: 'follow'
             };
             // make API call with parameters and use promises to get response
-            fetch("https://tla90i45jj.execute-api.us-east-1.amazonaws.com/test", requestOptions)
+            fetch("https://efxf5ddmvd.execute-api.us-east-1.amazonaws.com/test", requestOptions)
             .then(response => response.text())           
             .then(result => alert(JSON.parse(result).body))
             .try(error => console.log('error', error));
@@ -37,13 +37,11 @@
 
 <div>
     <form>
-        Enter the vehicle number to check if cases are available: <br><br>
-        <input type="text" id="license"><br><br>
+        Enter the vehicle number : &nbsp&nbsp <input type="text" id="license"><br><br>
         <button type="button" onclick="callAPI(document.getElementById('license').value)">Submit</button>
     </form>
     <br>
-    <button onclick="window.location.href = 'index.html';">Back</button>
-    <button onclick="window.location.href = 'EnterDetails.html';">Enter Details</button>
+    <button onclick="window.location.href = 'index.html';">Home</button>
 </div>
      
 </body>
