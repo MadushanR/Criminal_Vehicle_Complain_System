@@ -27,7 +27,7 @@
             // make API call with parameters and use promises to get response
             fetch("https://facb3k71v9.execute-api.us-east-1.amazonaws.com/test", requestOptions)
             .then(response => response.text())           
-            .then(result => alert(JSON.parse(result).body))
+            .then(result => alert(JSON.parse(JSON.parse(result).body)))
             .try(error => console.log('error', error));
         }
     </script>
