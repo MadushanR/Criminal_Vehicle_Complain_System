@@ -10,13 +10,13 @@
 
     <script>
         // define the callAPI function that takes a first name and last name as parameters
-        var callAPI = (License,Brand,Colour,Area,Crime)=>{
+        var callAPI = (License)=>{
             // instantiate a headers object
             var myHeaders = new Headers();
             // add content type header to object
             myHeaders.append("Content-Type", "application/json");
             // using built in JSON utility package turn object to string and store in a variable
-            var raw = JSON.stringify({"License":License,"Brand":Brand,"Colour":Colour,"Area":Area,"Crime":Crime});
+            var raw = JSON.stringify({"License":License});
             // create a JSON object with parameters for API call and store in a variable
             var requestOptions = {
                 method: 'POST',
@@ -25,9 +25,9 @@
                 redirect: 'follow'
             };
             // make API call with parameters and use promises to get response
-            fetch("https://facb3k71v9.execute-api.us-east-1.amazonaws.com/test", requestOptions)
+            fetch("https://byzciojl90.execute-api.us-east-1.amazonaws.com/test", requestOptions)
             .then(response => response.text())           
-            .then(result => alert(JSON.parse(JSON.parse(result).body)))
+            .then(result => alert(JSON.parse(result).body))
             .try(error => console.log('error', error));
         }
     </script>
@@ -38,12 +38,8 @@
 <div>
     <form>
         Enter the vehicle number : &nbsp&nbsp <input type="text" id="license"><br><br>
-        Enter the vehicle brand : &nbsp&nbsp <input type="text" id="brand"><br><br>
-        Enter the vehicle colour : &nbsp&nbsp <input type="text" id="colour"><br><br>
-        Enter the vehicle area : &nbsp&nbsp <input type="text" id="area"><br><br>
-        Enter the vehicle crime :  <br> <textarea id="crime"></textarea>
         <br><br>
-        <button type="button" onclick="callAPI(document.getElementById('license').value,document.getElementById('brand').value,document.getElementById('colour').value,document.getElementById('area').value,document.getElementById('crime').value)">Submit</button>
+        <button type="button" onclick="callAPI(document.getElementById('license').value)">Submit</button>
     </form>
     <br>
     <button onclick="window.location.href = 'index.html';">Home</button>
