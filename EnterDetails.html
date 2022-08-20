@@ -37,11 +37,11 @@
 
 <div>
     <form>
-        Enter the vehicle number : &nbsp&nbsp <input type="text" id="license"><br><br>
-        Enter the vehicle brand : &nbsp&nbsp <input type="text" id="brand"><br><br>
-        Enter the vehicle colour : &nbsp&nbsp <input type="text" id="colour"><br><br>
-        Enter the vehicle area : &nbsp&nbsp <input type="text" id="area"><br><br>
-        Enter the vehicle crime :  <br> <textarea id="crime"></textarea>
+        Enter the vehicle number : &nbsp&nbsp <input type="text" id="license" onfocus="this.value=''"><br><br>
+        Enter the vehicle brand : &nbsp&nbsp <input type="text" id="brand" onfocus="this.value=''"><br><br>
+        Enter the vehicle colour : &nbsp&nbsp <input type="text" id="colour" onfocus="this.value=''"><br><br>
+        Enter the vehicle area : &nbsp&nbsp <input type="text" id="area" onfocus="this.value=''"><br><br>
+        Enter the vehicle crime :  <br> <textarea id="crime" onfocus="this.value=''"></textarea>
         <br><br>
         <button type="button" onclick="callAPI(document.getElementById('license').value,document.getElementById('brand').value,document.getElementById('colour').value,document.getElementById('area').value,document.getElementById('crime').value)">Submit</button>
     </form>

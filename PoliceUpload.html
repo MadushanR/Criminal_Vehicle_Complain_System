@@ -40,7 +40,7 @@
 <div>
     <form>
         Enter the vehicle number to check if cases are available: <br><br>
-        <input type="text" id="license"><br><br>
+        <input type="text" id="license" onfocus="this.value=''"><br><br>
         <button type="button" onclick="callAPI(document.getElementById('license').value)">Submit</button>
     </form>
     <br>

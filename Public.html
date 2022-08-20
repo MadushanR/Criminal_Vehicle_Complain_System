@@ -37,8 +37,8 @@
 
 <div>
     <form>
-        Enter the vehicle number : &nbsp&nbsp <input type="text" id="license"><br><br>
-        Enter the vehicle seen area : &nbsp&nbsp <input type="text" id="sarea"><br><br>
+        Enter the vehicle number : &nbsp&nbsp <input type="text" id="license" onfocus="this.value=''"><br><br>
+        Enter the vehicle seen area : &nbsp&nbsp <input type="text" id="sarea" onfocus="this.value=''">><br><br>
         <button type="button" onclick="callAPI(document.getElementById('license').value,document.getElementById('sarea').value)">Submit</button>
     </form>
     <br>
