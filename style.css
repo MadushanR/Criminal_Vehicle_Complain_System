@@ -20,6 +20,7 @@ input,button,a{
 textarea {
     width: 50%;
     height: 200px;
+    font-size: xx-large;
 }
 
 #indexdiv{
