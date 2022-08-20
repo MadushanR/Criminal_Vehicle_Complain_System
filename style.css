@@ -1,7 +1,9 @@
-body{
+html,body{
     background-image: url('Images/bgimg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    background-position: center;
     font-size: x-large;
     color: white;
 }
