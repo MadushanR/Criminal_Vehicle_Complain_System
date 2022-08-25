@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Details</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // define the callAPI function that takes a first name and last name as parameters
+        var callAPI = (username,password)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"username":username,"password":password});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://ug1h83zsv9.execute-api.us-east-1.amazonaws.com/testt/t", requestOptions)
+            .then(response => response.text())           
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+</head>
+
+<body>
+
+<div>
+    <form>
+        Enter the username : &nbsp&nbsp <input type="text" id="username" onfocus="this.value=''"><br><br>
+        Enter the password : &nbsp&nbsp <input type="password" id="pwd" onfocus="this.value=''"><br><br>
+        <br><br>
+        <button type="button" onclick="callAPI(document.getElementById('username').value,document.getElementById('pwd').value)">Submit</button>
+    </form>
+    <br>
+    <button onclick="window.location.href = 'PoliceLogin.html';">Back</button>
+</div>
+     
+</body>
+
+</html>
