@@ -8,29 +8,7 @@
     <title>Police Details</title>
     <link rel="stylesheet" href="style.css">
 
-    <script>
-        // define the callAPI function that takes a first name and last name as parameters
-        var callAPI = (License)=>{
-            // instantiate a headers object
-            var myHeaders = new Headers();
-            // add content type header to object
-            myHeaders.append("Content-Type", "application/json");
-            // using built in JSON utility package turn object to string and store in a variable
-            var raw = JSON.stringify({"License":License});
-            // create a JSON object with parameters for API call and store in a variable
-            var requestOptions = {
-                method: 'POST',
-                headers: myHeaders,
-                body: raw,
-                redirect: 'follow'
-            };
-            // make API call with parameters and use promises to get response
-            fetch("https://byzciojl90.execute-api.us-east-1.amazonaws.com/test", requestOptions)
-            .then(response => response.text())           
-            .then(result => alert(JSON.parse(result).body))
-            .catch(error => console.log('error', error));
-        }
-    </script>
+   
 </head>
 
 <body>
@@ -44,7 +22,37 @@
     <br>
     <button onclick="window.location.href = 'Police.html';">Home</button>
 </div>
-     
+<script>
+    // define the callAPI function that takes a first name and last name as parameters
+    var callAPI = (License)=>{
+        // instantiate a headers object
+        var myHeaders = new Headers();
+        // add content type header to object
+        myHeaders.append("Content-Type", "application/json");
+        // using built in JSON utility package turn object to string and store in a variable
+        var raw = JSON.stringify({"License":License});
+        // create a JSON object with parameters for API call and store in a variable
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+        // make API call with parameters and use promises to get response
+        fetch("https://byzciojl90.execute-api.us-east-1.amazonaws.com/test", requestOptions)
+        .then(response => response.text())           
+        .then(function (data) {appendData(data);})           
+        .catch(error => console.log('error', error));
+    }
+
+    function appendData(data) {
+                var mainContainer = document.getElementById("myData");
+                mainContainer.innerHTML = "";
+                mainContainer.innerHTML = data;
+        }
+</script>
+<div id="myData"></div>
+
 </body>
 
 </html>
