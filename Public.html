@@ -27,8 +27,14 @@
             // make API call with parameters and use promises to get response
             fetch("https://qt4r8gfmw3.execute-api.us-east-1.amazonaws.com/test", requestOptions)
             .then(response => response.text())           
-            .then(result => alert(JSON.parse(result).body))
-            .catch(error => console.log('error', error));
+        .then(function (data) {appendData(data);})           
+        .catch(error => console.log('error', error));
+    }
+
+    function appendData(data) {
+                var mainContainer = document.getElementById("myData");
+                mainContainer.innerHTML = "";
+                mainContainer.innerHTML = data;
         }
     </script>
 </head>
@@ -48,6 +54,8 @@
         <button>Upload Picture</button>
         <br><br>
     </form>
+    <br>
+    <div id="myData"></div>
     <br>
     <button onclick="window.location.href = 'index.html';">Home</button>
 </div>
