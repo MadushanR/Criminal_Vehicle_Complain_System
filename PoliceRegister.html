@@ -27,8 +27,14 @@
             // make API call with parameters and use promises to get response
             fetch("https://ug1h83zsv9.execute-api.us-east-1.amazonaws.com/testt/t", requestOptions)
             .then(response => response.text())           
-            .then(result => alert(JSON.parse(result).body))
-            .catch(error => console.log('error', error));
+        .then(function (data) {appendData(data);})           
+        .catch(error => console.log('error', error));
+    }
+
+    function appendData(data) {
+                var mainContainer = document.getElementById("myData");
+                mainContainer.innerHTML = "";
+                mainContainer.innerHTML = data;
         }
     </script>
 </head>
@@ -42,6 +48,8 @@
         <br><br>
         <button type="button" onclick="callAPI(document.getElementById('username').value,document.getElementById('pwd').value)">Submit</button>
     </form>
+    <br>
+    <div id="myData"></div>
     <br>
     <button onclick="window.location.href = 'PoliceLogin.html';">Back</button>
 </div>

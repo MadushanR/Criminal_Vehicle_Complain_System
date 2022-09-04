@@ -1,11 +1,7 @@
 html,body{
-    background-image: url('Images/bgimg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    background-position: center;
+    background-color:grey;
     font-size: x-large;
-    color: white;
+    color: black;
 }
 
 div,form{
@@ -21,7 +17,7 @@ input,button,a{
 
 textarea {
     width: 50%;
-    height: 200px;
+    height: 120px;
     font-size: xx-large;
 }
 
