@@ -44,7 +44,7 @@
             var mainContainer = document.getElementById("myData");
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Licence : ' + data[i].License + ' , Area : ' + data[i].Area + ' , Brand : ' + data[i].Brand  + ' , Colour : ' + data[i].Colour  + ' , Crime : ' + data[i].Crime  + ' , Last Seen Date : ' + data[i].Last_Seen_Date  + ' ,  Last Seen Place : ' + data[i].Last_Seen_Place;
+                div.innerHTML = '| Licence : ' + data[i].License + ' | Area : ' + data[i].Area + ' | Brand : ' + data[i].Brand  + ' | Colour : ' + data[i].Colour  + ' | Crime : ' + data[i].Crime  + ' | Last Seen Date : ' + data[i].Last_Seen_Date  + ' |  Last Seen Place : ' + data[i].Last_Seen_Place + ' | ';
                 mainContainer.appendChild(div);
             }
         }
