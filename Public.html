@@ -9,6 +9,24 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
+
+        
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+            function showPosition(position) {
+                var location = document.getElementById("location");
+                location.innerHTML = "Latitude: " + position.coords.latitude + 
+                " - Longitude: " + position.coords.longitude;
+            }
+
+            
         // define the callAPI function that takes a first name and last name as parameters
         var callAPI = (License,Sarea)=>{
             // instantiate a headers object
@@ -51,6 +69,10 @@
         <button type="button" onclick="callAPI(document.getElementById('license').value,document.getElementById('sarea').value)">Submit</button>
     </form>
     <br>
+    <button onclick="getLocation()">Click here to get your coordinates</button>
+
+    <p id="location"></p>
+    <p id="myData"></p>
     <h3>OR</h3>
     <br>
     <form>
@@ -58,7 +80,6 @@
         <br><br>
     </form>
     <br>
-    <div id="myData"></div>
     <br>
     <button onclick="window.location.href = 'index.html';">Home</button>
 </div>
