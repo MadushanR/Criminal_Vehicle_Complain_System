@@ -28,13 +28,13 @@
 
             
         // define the callAPI function that takes a first name and last name as parameters
-        var callAPI = (License,Sarea)=>{
+        var callAPI = (License,Sarea,Pname,Pnum)=>{
             // instantiate a headers object
             var myHeaders = new Headers();
             // add content type header to object
             myHeaders.append("Content-Type", "application/json");
             // using built in JSON utility package turn object to string and store in a variable
-            var raw = JSON.stringify({"License":License,"Sarea":Sarea});
+            var raw = JSON.stringify({"License":License,"Sarea":Sarea,"Pname":Pname,"Pnum":Pnum});
             // create a JSON object with parameters for API call and store in a variable
             var requestOptions = {
                 method: 'POST',
@@ -66,7 +66,9 @@
     <form>
         Enter the vehicle number : &nbsp&nbsp <input type="text" id="license" onfocus="this.value=''"><br><br>
         Enter the vehicle seen area : &nbsp&nbsp <input type="text" id="sarea" onfocus="this.value=''"><br><br>
-        <button type="button" onclick="callAPI(document.getElementById('license').value,document.getElementById('sarea').value)">Submit</button>
+        Enter your name : &nbsp&nbsp <input type="text" id="pname" onfocus="this.value=''"><br><br>
+        Enter your number : &nbsp&nbsp <input type="text" id="pnum" onfocus="this.value=''"><br><br>
+        <button type="button" onclick="callAPI(document.getElementById('license').value,document.getElementById('sarea').value,document.getElementById('pname').value,document.getElementById('pnum').value)">Submit</button>
     </form>
     <br>
     <button onclick="getLocation()">Click here to get your coordinates</button>

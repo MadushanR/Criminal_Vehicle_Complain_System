@@ -49,7 +49,7 @@
                 var mainContainer = document.getElementById("myData");
                 mainContainer.innerHTML = "";
                 if(data.Found == "True")
-                mainContainer.innerHTML = data.Message +'<br/>' + 'Licence : ' + data.Item.License +'<br/>' + ' Area : ' + data.Item.Area +'<br/>' + ' Brand : ' + data.Item.Brand +'<br/>'  + ' Colour : ' + data.Item.Colour +'<br/>'  + ' Crime : ' + data.Item.Crime +'<br/>'  + ' Last Seen Date : ' + data.Item.Last_Seen_Date +'<br/>'  + '  Last Seen Place : ' + data.Item.Last_Seen_Place;
+                mainContainer.innerHTML = data.Message +'<br/>' + 'Licence : ' + data.Item.License +'<br/>' + ' Area : ' + data.Item.Area +'<br/>' + ' Brand : ' + data.Item.Brand +'<br/>'  + ' Colour : ' + data.Item.Colour +'<br/>'  + ' Crime : ' + data.Item.Crime +'<br/>'  + ' Last Seen Date : ' + data.Item.Last_Seen_Date +'<br/>'  + '  Last Seen Place : ' + data.Item.Last_Seen_Place +'<br/>'  + '  Person Found : ' + data.Item.Person_Name +'<br/>'  + '  Person Number : ' + data.Item.Person_Number;
                 else
                 mainContainer.innerHTML = data.Message;
         }
